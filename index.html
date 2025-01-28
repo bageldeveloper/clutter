@@ -3,18 +3,28 @@
   <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"> -->
+    <script src="https://kit.fontawesome.com/1c9144b004.js" crossorigin="anonymous"></script>
     <link href="./styles.css" rel="stylesheet">
     <title>Clutter</title>
-    <script src="script.js"></script>
   </head>
   <body>
-    <div class="top">
-      <button id="Back" ><</button>
+    <div id="menu-bar">
+      <div class="left" role="menu">
+        <button id="Back" ><</button>
       <button id="Home" >Home</button>
       <button id="Forward" >></button>
-
+      </div>
+      <div class="right">
+        <button class="menubar-btn" id="minimize-btn">-</button>
+        <button class="menubar-btn" id="max-unmax-btn">+</button>
+        <button class="menubar-btn" id="close-btn">x</button>
+      </div>
     </div>
-   <webview id="MainWebView" src="https://google.com" ></webview>
+   
+   <webview id="MainWebView" class = "container"src="https://google.com" ></webview>
+
+   <script src="./script.js"></script>
+
   </body>
 </html>
