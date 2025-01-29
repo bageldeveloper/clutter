@@ -2,6 +2,7 @@ const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 const { menu } = require("./menu");
 
+
 let mainWindow;
 
 const isWindows = process.platform === "win32";
@@ -11,11 +12,13 @@ function createWindow() {
     width: 800,
     height: 600,
     webPreferences: {
+      webviewTag: true,
       enableRemoteModule: true,
       preload: path.join(__dirname, "preload.js"),
       nodeIntegration: true,
       contextIsolation: false,
-      webviewTag: true
+      webviewTag: true,
+      icon: __dirname +  '/icon.ico'
       // (NOT RECOMMENDED)
       // If true, we can skip attaching functions from ./menu-functions.js to window object in preload.js.
       // And, instead, we can use electron APIs directly in renderer.js
@@ -39,6 +42,8 @@ function createWindow() {
     }
     
 });
+
+
 ipcMain.on("toggle-minimize-window", function(event) {
   if(mainWindow.isMinimized()) {
       mainWindow.unminimize();

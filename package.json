@@ -6,10 +6,12 @@
   "scripts": {
     "start": "electron ."
   },
-
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^34.0.1"
+  },
+  "dependencies": {
+    "electron-tabs": "^1.0.4"
   }
 }

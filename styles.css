@@ -52,3 +52,11 @@ button:hover {
 button i {
   color: white;
 }
+
+tab-view{
+  height:100%;
+}
+.etabs{
+  height:30px;
+  background-color: red;
+}

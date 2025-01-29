@@ -1,6 +1,5 @@
 const electron = require("electron");
 const ipc = electron.ipcRenderer;
-
 window.onload = function(){ 
 document.getElementById("Home").onclick = function(){goHome()};
 function goHome(){
@@ -58,4 +57,7 @@ function goForward(){
     // closeButton.addEventListener("click", e => {
     //     window.closeWindow(window);
     // });
+
+
+  
 }
