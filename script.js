@@ -1,4 +1,5 @@
 const electron = require("electron");
+const TabGroup = require("electron-tabs");
 const ipc = electron.ipcRenderer;
 window.onload = function(){ 
 document.getElementById("Home").onclick = function(){goHome()};
@@ -58,6 +59,14 @@ function goForward(){
     //     window.closeWindow(window);
     // });
 
+    let tabGroup = new TabGroup();
 
+    let webview = tab.webview;
+webview.loadURL("http://electron.atom.io");
+let tab = tabGroup.addTab({
+    title: "Electron",
+    src: "http://electron.atom.io",
+    visible: true
+});
   
 }

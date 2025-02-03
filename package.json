@@ -12,6 +12,6 @@
     "electron": "^34.0.1"
   },
   "dependencies": {
-    "electron-tabs": "^1.0.4"
+    "electron-tabs": "^0.4.2"
   }
 }
